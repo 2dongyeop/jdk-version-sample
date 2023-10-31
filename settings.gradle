@@ -1,2 +1,6 @@
 rootProject.name = 'jdk-version-sample'
+include 'modulepractice1'
+include 'submodule'
+include 'submodule1'
+include 'submodule2'
 
