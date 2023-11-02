@@ -1,6 +1,6 @@
 package com.songareeit.jdk9;
 
-import com.songareeit.package1.Class1;
+import com.songareeit1.package1.Class1;
 
 /**
  * JDK 9에 추가된 
