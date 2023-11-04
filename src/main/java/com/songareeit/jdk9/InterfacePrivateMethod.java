@@ -1,5 +1,8 @@
 package com.songareeit.jdk9;
 
+/**
+ * JDK 9에 추가된 Interface Private Method
+ */
 public class InterfacePrivateMethod {
 
     public static void main(String[] args) {

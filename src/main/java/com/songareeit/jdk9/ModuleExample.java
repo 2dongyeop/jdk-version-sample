@@ -3,7 +3,8 @@ package com.songareeit.jdk9;
 import com.songareeit1.package1.Class1;
 
 /**
- * JDK 9에 추가된 
+ * JDK 9에 추가된 Module System
+ * @see <a href="https://openjdk.org/jeps/261">Open JDK</a>
  */
 public class ModuleExample {
 
