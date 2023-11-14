@@ -18,7 +18,7 @@ import java.lang.reflect.Method;
     int count() default 0;
 }
 
-public class Annotation {
+public class AnnotationExample {
     @MyAnnotation(value = "Custom Value", count = 10)
     public void myAnnotatedMethod() {
         System.out.println("Annotation.myAnnotatedMethod");
@@ -27,7 +27,7 @@ public class Annotation {
     public static void main(String[] args) throws NoSuchMethodException {
 
         // Annotation (예제) 클래스 추출
-        Class<Annotation> clazz = Annotation.class;
+        Class<AnnotationExample> clazz = AnnotationExample.class;
 
         // (애너테이션을 작성해놓은) 메서드 추출
         Method method = clazz.getMethod("myAnnotatedMethod");
