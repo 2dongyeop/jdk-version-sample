@@ -27,8 +27,8 @@ public class LockExample {
         thread2.start();
 
         try {
-            thread1.join();
-            thread2.join();
+            thread1.join(); // 스레드의 종료를 기다림
+            thread2.join(); // 스레드의 종료를 기다림
         } catch (InterruptedException e) {
             System.err.println("e = " + e);
         }
