@@ -2,6 +2,8 @@ package com.songareeit.jdk21;
 
 import java.text.MessageFormat;
 
+import static java.lang.StringTemplate.STR;
+
 /**
  * JDK 21에 추가된 문자열 보간법 제공
  */
@@ -18,8 +20,8 @@ public class StringTemplatesExample {
 
         // After JDK 21 : Using STR(String Template)
         // --enabled-preview 필요
-//        System.out.println(usingSTRProcessor(feelsLike, temperature, unit));
-//        System.out.println(usingSTRJSONBlock(feelsLike, temperature, unit));
+        System.out.println(usingSTRProcessor(feelsLike, temperature, unit));
+        System.out.println(usingSTRJSONBlock(feelsLike, temperature, unit));
     }
 
     static String composeUsingFormatters(String feelsLike, String temperature, String unit) {
@@ -33,19 +35,19 @@ public class StringTemplatesExample {
     }
 
     // --enabled-preview 필요
-//    static String usingSTRProcessor(String feelsLike, String temperature, String unit) {
-//        return STR
-//                . "Today's weather is \{ feelsLike }, with a temperature of \{ temperature } degrees \{ unit }" ;
-//    }
-//
-//    static String usingSTRJSONBlock(String feelsLike, String temperature, String unit) {
-//        return STR
-//                . """
-//      {
-//        "feelsLike": "\{ feelsLike }",
-//        "temperature": "\{ temperature }",
-//        "unit": "\{ unit }"
-//      }
-//      """ ;
-//    }
+    static String usingSTRProcessor(String feelsLike, String temperature, String unit) {
+        return STR
+                ."Today's weather is \{feelsLike}, with a temperature of \{temperature} degrees \{unit}";
+    }
+
+    static String usingSTRJSONBlock(String feelsLike, String temperature, String unit) {
+        return STR
+                ."""
+      {
+        "feelsLike": "\{feelsLike}",
+        "temperature": "\{temperature}",
+        "unit": "\{unit}"
+      }
+      """;
+    }
 }
